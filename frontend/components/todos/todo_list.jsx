@@ -4,7 +4,7 @@ import TodoForm from './todo_form';
 
 const TodoListContainer = (props) => {
   const listItems = props.todos.map((todo, idx) => (
-      <TodoListItem key={idx} todo={todo} />
+      <TodoListItem key={idx} todo={todo} removeTodo={props.removeTodo} />
   ));
 
   return (

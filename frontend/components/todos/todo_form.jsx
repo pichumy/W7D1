@@ -18,6 +18,10 @@ class TodoForm extends React.Component {
     let body = this.state.body;
     let todo = {id: uniqueId(),title: title, body:body};
     this.props.receiveTodo(todo);
+    this.setState({
+      body: "",
+      title: ""
+    });
   }
 
   handleChange(event){
